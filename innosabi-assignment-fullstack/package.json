@@ -1,0 +1,19 @@
+{
+  "name": "innosabi-fdev-challenge",
+  "version": "1.0.0",
+  "description": "innosabi frontend dev challenge",
+  "author": "Hans-Peter Heid <hans.heid@innosabi.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest-cli":"^22.0.5",
+    "jquery":"^3.2.1",
+    "bootstrap": "^4.0.0-beta.3",
+    "popper.js": "^1.12.9"
+  }
+}
