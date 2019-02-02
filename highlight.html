@@ -25,7 +25,7 @@
                     <div class="input-group">
                         <input id="search" type="text" class="form-control" placeholder="Highlight in text">
                         <span class="input-group-btn">
-                            <button class="btn btn-secondary" type="button">Search</button>
+                            <button class="btn btn-secondary" type="submit">Search</button>
                         </span>
                     </div>
                 </form>
@@ -95,5 +95,16 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $(function() {
+                $('form').submit(function(e){
+                    e.preventDefault();
+                    var search = $('#search').val();
+                    var hilitor = new Hilitor();
+                    hilitor.apply(search);
+                });
+            });
+        </script>
+
     </body>
 </html>
