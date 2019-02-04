@@ -30,7 +30,7 @@
                     </div>
                 </form>
 
-                <div class="search-content">
+                <div class="search-content" id="search-content">
 
                     <h2>Perceived end knowledge certainly day sweetness why cordially</h2>
 
@@ -95,13 +95,13 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/hilitor.js"></script>
         <script>
             $(function() {
                 $('form').submit(function(e){
                     e.preventDefault();
-                    var search = $('#search').val();
-                    var hilitor = new Hilitor();
-                    hilitor.apply(search);
+                    var hilitor = new Hilitor('search-content','MARK');
+                    hilitor.apply($('#search').val());
                 });
             });
         </script>

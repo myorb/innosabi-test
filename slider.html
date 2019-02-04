@@ -58,5 +58,19 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+    <script>
+
+        $.get( "data/projects.json", function( data ) {
+//            $( ".result" ).html( data );
+//            alert( "Load was performed." );
+            $.each( data.data, function( key, item ) {
+                let img = 'https://demo.staging.innosabi.com/api/v4/media/'+item.image+'/thumbnail/width/200/height/200/strategy/crop';
+                $('<div class="item"><img src="'+img+'"><div class="carousel-caption"></div>   </div>').appendTo('.carousel-inner');
+                console.log(item);
+            });
+
+
+        });
+    </script>
     </body>
 </html>
